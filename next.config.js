@@ -5,9 +5,7 @@ const nextConfig = {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
     formats: ['image/avif', 'image/webp'],
   },
-  experimental: {
-    optimizeCss: true,
-  },
+
 };
 
 module.exports = nextConfig;
