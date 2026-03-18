@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Download, Briefcase, GraduationCap, Award } from 'lucide-react';
 import Container from '@/components/shared/Container';
 import SectionHeading from '@/components/shared/SectionHeading';
@@ -24,9 +25,11 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto mb-16">
           <div className="flex flex-col md:flex-row gap-8 items-center mb-8">
             <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary shadow-lg">
-              <img 
+              <Image 
                 src="/images/profile/mohamed-ashif.jpg" 
                 alt="Mohamed Ashif"
+                width={128}
+                height={128}
                 className="w-full h-full object-cover"
               />
             </div>

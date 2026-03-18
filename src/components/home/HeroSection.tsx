@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronDown, Sparkles } from 'lucide-react';
 import { siteConfig } from '@/lib/constants';
 import Button from '@/components/ui/Button';
@@ -97,9 +98,11 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
             <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-primary to-secondary p-1 transform group-hover:scale-110 transition-transform duration-500">
               <div className="w-full h-full rounded-full overflow-hidden">
-                <img 
+                <Image 
                   src="/images/profile/mohamed-ashif.jpg" 
                   alt="Mohamed Ashif"
+                  width={128}
+                  height={128}
                   className="w-full h-full object-cover"
                 />
               </div>
