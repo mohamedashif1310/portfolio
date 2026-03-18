@@ -42,7 +42,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default function BlogPostPage({ params }: { params: { slug: string } }) {
-  const relatedPosts = []; // Would be fetched based on category/tags
+  const relatedPosts: never[] = []; // Would be fetched based on category/tags
 
   return (
     <div className="py-20">
