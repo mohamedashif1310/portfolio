@@ -1,0 +1,99 @@
+---
+title: "How I Built My Portfolio Website"
+date: "2024-03-15"
+excerpt: "A comprehensive guide to building a modern portfolio website with Next.js, TypeScript, and Tailwind CSS."
+category: "Tutorial"
+tags: ["Next.js", "TypeScript", "Tailwind", "Portfolio"]
+coverImage: "/images/blog/portfolio.jpg"
+author:
+  name: "Your Name"
+  avatar: "👤"
+  bio: "Testing Associate at Amazon"
+---
+
+# How I Built My Portfolio Website
+
+Building a portfolio website is an essential step for any developer or professional looking to showcase their work. In this comprehensive guide, I'll walk you through the process of creating a modern, performant portfolio using Next.js 14, TypeScript, and Tailwind CSS.
+
+## Why Next.js?
+
+Next.js has become the go-to framework for building React applications, and for good reason:
+
+- **Server-Side Rendering**: Improved SEO and initial load times
+- **Static Site Generation**: Lightning-fast page loads
+- **App Router**: Modern routing with layouts and nested routes
+- **Image Optimization**: Automatic image optimization out of the box
+
+## The Tech Stack
+
+For this project, I chose a modern stack that prioritizes developer experience and performance:
+
+```typescript
+const techStack = {
+  framework: 'Next.js 14',
+  language: 'TypeScript',
+  styling: 'Tailwind CSS',
+  animations: 'Framer Motion',
+  deployment: 'Vercel'
+};
+```
+
+## Project Structure
+
+I organized the project following Next.js 14 App Router conventions:
+
+- `/app` - Pages and layouts
+- `/components` - Reusable React components
+- `/lib` - Utility functions and configurations
+- `/content` - MDX blog posts and project case studies
+
+## Key Features Implemented
+
+### 1. Dark Mode
+
+Implemented a theme toggle with localStorage persistence:
+
+```typescript
+const toggleTheme = () => {
+  const newTheme = theme === 'light' ? 'dark' : 'light';
+  setTheme(newTheme);
+  localStorage.setItem('theme', newTheme);
+  document.documentElement.classList.toggle('dark');
+};
+```
+
+### 2. Blog System with MDX
+
+Used MDX for blog posts, allowing me to embed React components directly in markdown:
+
+- Syntax highlighting for code blocks
+- Custom components for callouts and alerts
+- Automatic table of contents generation
+
+### 3. Smooth Animations
+
+Leveraged Framer Motion for entrance animations and page transitions:
+
+- Fade-in effects on scroll
+- Smooth page transitions
+- Hover animations on cards
+
+## Performance Optimizations
+
+- Used Next.js Image component for automatic optimization
+- Implemented lazy loading for below-fold content
+- Minimized client-side JavaScript with Server Components
+- Achieved 95+ Lighthouse scores across all categories
+
+## Lessons Learned
+
+1. **Start with a solid foundation**: Good project structure saves time later
+2. **Prioritize performance**: Users notice fast sites
+3. **Make it accessible**: WCAG compliance isn't optional
+4. **Test on real devices**: Emulators don't catch everything
+
+## Conclusion
+
+Building a portfolio website doesn't have to be complicated. With the right tools and approach, you can create a professional, performant site that showcases your work effectively.
+
+The complete source code is available on my GitHub. Feel free to use it as a starting point for your own portfolio!

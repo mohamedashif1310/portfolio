@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[YOUR FULL NAME] - Portfolio & Resume</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ==================== GLOBAL STYLES ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #1a1a1a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0a0;
+            --accent: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-shadow: rgba(0, 0, 0, 0.3);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            overflow-x: hidden;
+        }
+        
+        /* Animated gradient background */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(120, 120, 120, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(150, 150, 150, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(100, 100, 100, 0.1) 0%, transparent 50%);
+            z-index: -1;
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        /* ==================== NAVIGATION ==================== */
+        nav {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 12px 30px;
+            box-shadow: 0 8px 32px var(--glass-shadow);
+        }
+        
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        nav a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+        
+        nav a:hover::after {
+            width: 100%;
+        }
+        
+        /* ==================== CONTAINER ==================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 40px 60px;
+        }
+        
+        /* ==================== HEADER SECTION ==================== */
+        header {
+            text-align: center;
+            padding: 80px 20px 60px;
+            margin-bottom: 80px;
+        }
+        
+        .profile-image {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 2px solid var(--glass-border);
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+            color: var(--text-secondary);
+            box-shadow: 0 8px 32px var(--glass-shadow);
+        }
+        
+        header h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+            background: linear-gradient(135deg, #ffffff 0%, #a0a0a0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        header .tagline {
+            font-size: 1.2em;
+            font-weight: 400;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .contact-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-links a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+        
+        /* ==================== GLASS CARD ==================== */
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px var(--glass-shadow);
+            transition: all 0.3s ease;
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 48px var(--glass-shadow);
+        }
+        
+        /* ==================== SECTION HEADERS ==================== */
+        .section-title {
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--text-primary);
+        }
+        
+        .section-title i {
+            font-size: 0.8em;
+            color: var(--text-secondary);
+        }
+        
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, var(--glass-border), transparent);
+        }
+        
+        /* ==================== PROFESSIONAL SUMMARY ==================== */
+        .summary-text {
+            font-size: 1.05em;
+            line-height: 1.9;
+            color: var(--text-secondary);
+            text-align: left;
+        }
+        
+        /* ==================== EXPERIENCE SECTION ==================== */
+        .job {
+            margin-bottom: 40px;
+        }
+        
+        .job-header {
+            margin-bottom: 20px;
+        }
+        
+        .job-title {
+            font-size: 1.4em;
+            color: var(--text-primary);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .company-info {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            color: var(--text-secondary);
+            font-size: 0.95em;
+            margin-bottom: 5px;
+        }
+        
+        .company-name {
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .project-phase {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px 25px;
+            margin: 20px 0;
+            border-left: 2px solid var(--glass-border);
+            border-radius: 8px;
+        }
+        
+        .project-phase h4 {
+            font-size: 1.1em;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .job ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .job ul li {
+            padding-left: 25px;
+            margin-bottom: 10px;
+            position: relative;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+        
+        .job ul li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--text-primary);
+            font-weight: normal;
+        }
+        
+        .job ul ul {
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+        
+        .job ul ul li:before {
+            content: "·";
+        }
+        
+        /* ==================== SKILLS SECTION ==================== */
+        .skills-container {
+            display: grid;
+            gap: 30px;
+        }
+        
+        .skill-category h4 {
+            font-size: 1.1em;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .skill-tag {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: 400;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+        
+        .skill-tag:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        /* ==================== ACHIEVEMENTS ==================== */
+        .achievement {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border-left: 2px solid var(--glass-border);
+        }
+        
+        .achievement strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        
+        .achievement {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        /* ==================== EDUCATION ==================== */
+        .education-item {
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .degree {
+            font-size: 1.1em;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 5px;
+        }
+        
+        .university {
+            color: var(--text-secondary);
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .edu-details {
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+        
+        /* ==================== CERTIFICATIONS ==================== */
+        .certifications-note {
+            color: var(--text-secondary);
+            font-style: italic;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            border-left: 2px solid var(--glass-border);
+        }
+        
+        /* ==================== FOOTER ==================== */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-secondary);
+            font-size: 0.9em;
+        }
+        
+        /* ==================== SCROLL ANIMATIONS ==================== */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .glass-card:nth-child(1) { animation-delay: 0.1s; }
+        .glass-card:nth-child(2) { animation-delay: 0.2s; }
+        .glass-card:nth-child(3) { animation-delay: 0.3s; }
+        .glass-card:nth-child(4) { animation-delay: 0.4s; }
+        .glass-card:nth-child(5) { animation-delay: 0.5s; }
+        .glass-card:nth-child(6) { animation-delay: 0.6s; }
+        
+        /* ==================== RESPONSIVE ==================== */
+        @media screen and (max-width: 768px) {
+            nav {
+                padding: 10px 20px;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+            
+            nav a {
+                font-size: 0.85em;
+            }
+            
+            .container {
+                padding: 80px 20px 40px;
+            }
+            
+            header h1 {
+                font-size: 2.5em;
+            }
+            
+            header .tagline {
+                font-size: 1em;
+            }
+            
+            .glass-card {
+                padding: 25px;
+            }
+            
+            .section-title {
+                font-size: 1.6em;
+            }
+            
+            .company-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+        
+        /* ==================== PRINT STYLES ==================== */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+            
+            body::before {
+                display: none;
+            }
+            
+            nav {
+                display: none;
+            }
+            
+            .glass-card {
+                background: white;
+                border: 1px solid #ddd;
+                box-shadow: none;
+                page-break-inside: avoid;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <!-- ==================== HEADER SECTION ==================== -->
+        <header>
+            <div class="profile-image">
+                <i class="fas fa-user"></i>
+            </div>
+            <h1>[YOUR FULL NAME]</h1>
+            <div class="tagline">Testing Associate | QA & Automation Engineer | Data Engineering & IoT Device Testing</div>
+            
+            <div class="contact-links">
+                <a href="mailto:[YOUR EMAIL]">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                </a>
+                <a href="tel:[YOUR PHONE NUMBER]">
+                    <i class="fas fa-phone"></i>
+                    <span>Phone</span>
+                </a>
+                <a href="[YOUR LINKEDIN URL]" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="#">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>[YOUR CITY, STATE]</span>
+                </a>
+                <!-- Uncomment if you have GitHub -->
+                <!-- <a href="[YOUR GITHUB URL]" target="_blank">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                </a> -->
+            </div>
+        </header>
+        
+        <!-- ==================== MAIN CONTENT ==================== -->
+        <main>
+            <!-- ==================== PROFESSIONAL SUMMARY SECTION ==================== -->
+            <section id="about" class="glass-card fade-in">
+                <h2 class="section-title"><i class="fas fa-user"></i> About Me</h2>
+                <p class="summary-text">
+                    Testing Associate at Amazon with 1.2 years of hands-on experience in end-to-end device testing across multiple Amazon product lines, including Amazon Tablets, Amazon Fire Stick devices, and Amazon Echo devices. Deep expertise in UI Testing, Automation Testing, Script Writing, and ADB (Android Debug Bridge) based testing, with specialized focus on boot recovery testing, device stability testing, kernel testing, and boot time performance testing. Successfully contributed to the Amazon Fire Stick 4K Select project as a key testing associate and recently transitioned to RING Data Engineering and Testing, focused on Amazon Ring devices and WiFi connectivity testing. Additionally holds 6 months of professional freelance experience as an AI Prompt Engineer and LLM (Large Language Model) Data Trainer and Evaluator, combining strong hardware/device QA expertise with emerging AI/ML data evaluation skills.
+                </p>
+            </section>
+            
+            <!-- ==================== EXPERIENCE SECTION ==================== -->
+            <section id="experience" class="glass-card fade-in">
+                <h2 class="section-title"><i class="fas fa-briefcase"></i> Experience</h2>
+                
+                <!-- Job 1: Amazon Testing Associate -->
+                <article class="job">
+                    <div class="job-header">
+                        <h3 class="job-title">Testing Associate</h3>
+                        <div class="company-info">
+                            <span class="company-name">Amazon</span>
+                            <span class="duration">[START MONTH/YEAR] – Present (1.2 years and ongoing)</span>
+                        </div>
+                        <div class="company-info">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> [CITY, STATE]</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Project Phase 1 -->
+                    <div class="project-phase">
+                        <h4>Project / Phase 1: Amazon Devices Testing (Fire Stick, Tablets, Echo)</h4>
+                        <ul>
+                            <li>Performed comprehensive end-to-end testing across multiple Amazon device product lines including Amazon Tablets, Amazon Fire Stick devices, and Amazon Echo devices.</li>
+                            <li>Conducted in-depth UI testing to validate user interface elements, responsiveness, navigation flows, and visual consistency across device form factors.</li>
+                            <li>Designed and executed Automation Testing frameworks and test suites to improve testing efficiency and regression coverage.</li>
+                            <li>Developed and maintained test scripts for automated and semi-automated testing workflows.</li>
+                            <li>Performed extensive ADB (Android Debug Bridge) based testing including:
+                                <ul>
+                                    <li>Boot recovery testing — validating device recovery procedures and boot loader integrity.</li>
+                                    <li>Stability testing — long-duration soak tests and stress tests to ensure device reliability under sustained usage.</li>
+                                    <li>Kernel testing — verifying kernel-level operations, driver interactions, and OS-level stability.</li>
+                                    <li>Boot time testing — measuring and benchmarking device boot time performance against defined thresholds and KPIs.</li>
+                                </ul>
+                            </li>
+                            <li>Played a key role in the successful delivery and launch of the Amazon Fire Stick 4K Select project — contributed to test planning, execution, defect tracking, and sign-off.</li>
+                            <li>Collaborated with cross-functional teams including developers, product managers, and firmware engineers to identify, document, and resolve critical defects.</li>
+                            <li>Created detailed test cases, test plans, and defect reports with clear reproduction steps and severity classifications.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Project Phase 2 -->
+                    <div class="project-phase">
+                        <h4>Project / Phase 2: RING Data Engineering & WiFi Testing (Current)</h4>
+                        <ul>
+                            <li>Transitioned to the RING Data Engineering and Testing team to work on Amazon Ring device ecosystem.</li>
+                            <li>Currently focused on WiFi connectivity testing for Amazon Ring devices — validating wireless performance, connection stability, range testing, and network handoff scenarios.</li>
+                            <li>Involved in data engineering tasks related to Ring device telemetry, test data pipelines, and quality metrics analysis.</li>
+                            <li>Testing Ring devices across various WiFi protocols, frequency bands, and real-world network conditions.</li>
+                            <li>Contributing to test strategy development for Ring's next-generation device testing frameworks.</li>
+                        </ul>
+                    </div>
+                </article>
+                
+                <!-- Job 2: Freelance AI Prompt Engineer -->
+                <article class="job">
+                    <div class="job-header">
+                        <h3 class="job-title">AI Prompt Engineer & LLM Data Trainer and Evaluator</h3>
+                        <div class="company-info">
+                            <span class="company-name">Freelance / Independent Contractor</span>
+                            <span class="duration">[MONTH/YEAR] – [MONTH/YEAR] (6 Months)</span>
+                        </div>
+                        <div class="company-info">
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Remote</span>
+                        </div>
+                    </div>
+                    
+                    <ul>
+                        <li>Worked as a freelance AI Prompt Engineer, crafting and optimizing prompts for Large Language Models (LLMs) to improve response accuracy, relevance, and contextual understanding.</li>
+                        <li>Performed LLM data training tasks — curating, labeling, and preparing high-quality training datasets for AI model fine-tuning.</li>
+                        <li>Served as an LLM Evaluator — systematically assessing AI model outputs for correctness, coherence, safety, helpfulness, and adherence to guidelines.</li>
+                        <li>Developed evaluation rubrics and rating frameworks to ensure consistent and objective model performance assessment.</li>
+                        <li>Provided detailed feedback and annotations to improve model behavior across diverse use cases and domains.</li>
+                        <li>Gained hands-on understanding of AI/ML workflows, reinforcement learning from human feedback (RLHF), and prompt engineering best practices.</li>
+                    </ul>
+                </article>
+            </section>
+            
+            <!-- ==================== KEY SKILLS SECTION ==================== -->
+            <section id="skills" class="glass-card fade-in">
+                <h2 class="section-title"><i class="fas fa-tools"></i> Skills</h2>
+                
+                <div class="skills-container">
+                    <!-- Testing & QA Skills -->
+                    <div class="skill-category">
+                        <h4>Testing & QA</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">UI Testing</span>
+                            <span class="skill-tag">Automation Testing</span>
+                            <span class="skill-tag">Manual Testing</span>
+                            <span class="skill-tag">Regression Testing</span>
+                            <span class="skill-tag">Stability Testing</span>
+                            <span class="skill-tag">Boot Recovery Testing</span>
+                            <span class="skill-tag">Kernel Testing</span>
+                            <span class="skill-tag">Boot Time Testing</span>
+                            <span class="skill-tag">WiFi Connectivity Testing</span>
+                            <span class="skill-tag">IoT Device Testing</span>
+                            <span class="skill-tag">Test Case Design & Execution</span>
+                            <span class="skill-tag">Test Plan Development</span>
+                            <span class="skill-tag">Defect Tracking & Reporting</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Tools & Technologies -->
+                    <div class="skill-category">
+                        <h4>Tools & Technologies</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">ADB (Android Debug Bridge)</span>
+                            <span class="skill-tag">Test Script Development</span>
+                            <span class="skill-tag">Automation Frameworks</span>
+                            <span class="skill-tag">Bug Tracking Tools (JIRA)</span>
+                            <span class="skill-tag">Test Management Tools</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Devices & Platforms -->
+                    <div class="skill-category">
+                        <h4>Devices & Platforms</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Amazon Fire Stick (Fire Stick 4K Select)</span>
+                            <span class="skill-tag">Amazon Tablets (Fire Tablets)</span>
+                            <span class="skill-tag">Amazon Echo Devices</span>
+                            <span class="skill-tag">Amazon Ring Devices</span>
+                            <span class="skill-tag">Android-based Embedded Systems</span>
+                        </div>
+                    </div>
+                    
+                    <!-- AI & Machine Learning -->
+                    <div class="skill-category">
+                        <h4>AI & Machine Learning</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">AI Prompt Engineering</span>
+                            <span class="skill-tag">LLM (Large Language Model) Evaluation</span>
+                            <span class="skill-tag">LLM Data Training & Curation</span>
+                            <span class="skill-tag">RLHF (Reinforcement Learning from Human Feedback)</span>
+                            <span class="skill-tag">Data Annotation & Labeling</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Soft Skills -->
+                    <div class="skill-category">
+                        <h4>Soft Skills</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Cross-functional Collaboration</span>
+                            <span class="skill-tag">Attention to Detail</span>
+                            <span class="skill-tag">Analytical Thinking</span>
+                            <span class="skill-tag">Technical Documentation</span>
+                            <span class="skill-tag">Adaptability to New Domains</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ==================== SUCCESSFUL PROJECTS / KEY ACHIEVEMENTS SECTION ==================== -->
+            <section id="achievements" class="glass-card fade-in">
+                <h2 class="section-title"><i class="fas fa-trophy"></i> Key Achievements</h2>
+                
+                <div class="achievement">
+                    <strong>Amazon Fire Stick 4K Select</strong> — Successfully contributed to the complete testing lifecycle of the Fire Stick 4K Select, from test planning through execution to launch sign-off. Ensured device quality across UI, automation, ADB-based boot recovery, stability, kernel, and boot time testing parameters.
+                </div>
+                
+                <div class="achievement">
+                    <strong>RING WiFi Device Testing (Ongoing)</strong> — Currently contributing to the Amazon Ring device WiFi testing initiative as part of the RING Data Engineering team, validating connectivity and performance of Ring devices.
+                </div>
+                
+                <div class="achievement">
+                    <strong>AI/LLM Evaluation Projects</strong> — Completed multiple freelance engagements involving prompt engineering, LLM training data preparation, and model output evaluation for AI companies.
+                </div>
+            </section>
+            
+            <!-- ==================== EDUCATION SECTION ==================== -->
+            <section id="education" class="glass-card fade-in">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+                
+                <div class="education-item">
+                    <div class="degree">[YOUR DEGREE, e.g., B.Tech / B.E. / B.Sc. in Computer Science or relevant field]</div>
+                    <div class="university">[YOUR UNIVERSITY NAME]</div>
+                    <div class="edu-details">
+                        <span>Graduation Year: [YEAR]</span> | 
+                        <span><i class="fas fa-map-marker-alt"></i> [CITY, STATE]</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- ==================== CERTIFICATIONS SECTION ==================== -->
+            <section id="certifications">
+                <h2><i class="fas fa-certificate"></i> Certifications</h2>
+                
+                <div class="certifications-note">
+                    [Add your certifications here — e.g., ISTQB, AWS, Automation certifications, AI/ML certifications]
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

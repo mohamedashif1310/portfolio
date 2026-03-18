@@ -1,0 +1,143 @@
+---
+title: "5 Lessons I Learned as a QA Engineer"
+date: "2024-03-10"
+excerpt: "Key insights from my journey in quality assurance and device testing at Amazon."
+category: "Career"
+tags: ["Career", "QA", "Testing", "Amazon"]
+coverImage: "/images/blog/qa-lessons.jpg"
+author:
+  name: "Your Name"
+  avatar: "👤"
+  bio: "Testing Associate at Amazon"
+---
+
+# 5 Lessons I Learned as a QA Engineer
+
+After 1.2 years as a Testing Associate at Amazon, working on products like Fire Stick, Echo devices, and Ring, I've learned invaluable lessons about quality assurance, device testing, and professional growth. Here are the five most important insights from my journey.
+
+## 1. Automation is Essential, But Manual Testing Still Matters
+
+When I first started, I thought automation would replace all manual testing. Reality proved different.
+
+### The Balance
+
+- **Automation**: Perfect for regression testing, repetitive tasks, and CI/CD pipelines
+- **Manual Testing**: Essential for exploratory testing, UX evaluation, and edge cases
+
+```python
+# Example: Automated boot time test
+def test_device_boot_time():
+    start_time = time.time()
+    device.reboot()
+    device.wait_for_boot_complete()
+    boot_time = time.time() - start_time
+    
+    assert boot_time < MAX_BOOT_TIME, f"Boot time {boot_time}s exceeds threshold"
+```
+
+### Key Takeaway
+
+Build a robust automation framework, but never underestimate the value of human intuition in testing.
+
+## 2. Understanding the User Journey is Critical
+
+Testing isn't just about finding bugs—it's about ensuring a great user experience.
+
+### What I Learned
+
+- Test from the user's perspective, not just technical specifications
+- Consider different user personas and use cases
+- Real-world testing conditions often differ from lab environments
+
+### Example: WiFi Testing
+
+When testing Ring devices, I learned that WiFi performance in a controlled lab doesn't reflect real-world conditions:
+
+- Multiple competing networks
+- Physical obstacles (walls, furniture)
+- Network congestion during peak hours
+- Different router configurations
+
+## 3. Documentation is Your Best Friend
+
+Early in my career, I underestimated the importance of documentation. Big mistake.
+
+### What to Document
+
+1. **Test Cases**: Clear steps, expected results, actual results
+2. **Bug Reports**: Reproduction steps, severity, screenshots/logs
+3. **Test Plans**: Scope, approach, resources, timeline
+4. **Knowledge Base**: Common issues, workarounds, best practices
+
+### Template I Use
+
+```markdown
+## Bug Report
+
+**Title**: [Clear, concise description]
+**Severity**: Critical | High | Medium | Low
+**Device**: [Model, OS version]
+**Steps to Reproduce**:
+1. Step one
+2. Step two
+3. Step three
+
+**Expected Result**: [What should happen]
+**Actual Result**: [What actually happens]
+**Logs**: [Attach relevant logs]
+```
+
+## 4. Communication Skills Matter as Much as Technical Skills
+
+Being a great tester isn't just about finding bugs—it's about effectively communicating findings to stakeholders.
+
+### Skills I Developed
+
+- **Clear Bug Reports**: Developers shouldn't have to guess what you found
+- **Status Updates**: Keep stakeholders informed without overwhelming them
+- **Cross-functional Collaboration**: Work effectively with developers, PMs, and firmware engineers
+- **Presenting Findings**: Explain technical issues to non-technical audiences
+
+### Real Example
+
+Instead of: "Device crashes sometimes"
+
+Better: "Device crashes when quantity field is set to zero during checkout. Reproducible 100% of the time on Fire Stick 4K (OS 7.2.8.4). Critical severity as it blocks purchase flow."
+
+## 5. Continuous Learning is Non-Negotiable
+
+Technology evolves rapidly. What worked yesterday might be obsolete tomorrow.
+
+### How I Stay Current
+
+- **Internal Training**: Amazon's extensive learning resources
+- **Side Projects**: Built automation frameworks, learned new tools
+- **Community**: Engaged with QA communities, read blogs, attended webinars
+- **Cross-skilling**: Learned AI/ML evaluation through freelance work
+
+### Recent Skills Added
+
+- ADB advanced commands for kernel testing
+- Python automation frameworks
+- Data engineering for telemetry analysis
+- AI prompt engineering and LLM evaluation
+
+## Bonus Lesson: Celebrate the Wins
+
+QA can feel thankless—you're often the bearer of bad news. But remember:
+
+- Every bug you find is a problem users won't face
+- Your work directly impacts product quality
+- You're the last line of defense before release
+
+### My Proudest Moment
+
+Finding a critical boot recovery issue on Fire Stick 4K Select just before launch. The fix prevented thousands of potential customer issues.
+
+## Conclusion
+
+Quality assurance is challenging but incredibly rewarding. These lessons have shaped my approach to testing and continue to guide my professional growth.
+
+Whether you're just starting in QA or are a seasoned professional, remember: great testing combines technical skills, user empathy, clear communication, and continuous learning.
+
+What lessons have you learned in your QA journey? I'd love to hear your experiences!
