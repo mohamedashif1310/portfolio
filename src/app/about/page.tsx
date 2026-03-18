@@ -25,12 +25,16 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto mb-16">
           <div className="flex flex-col md:flex-row gap-8 items-center mb-8">
             <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary shadow-lg">
-              <Image 
-                src="/images/profile/mohamed-ashif.jpg" 
+              <img
+                src="/images/profile/mohamed-ashif.jpg"
                 alt="Mohamed Ashif"
                 width={128}
                 height={128}
                 className="w-full h-full object-cover"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = 'none';
+                }}
               />
             </div>
             <div className="flex-1 text-center md:text-left">

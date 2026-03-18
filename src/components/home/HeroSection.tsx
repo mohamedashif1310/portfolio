@@ -98,12 +98,17 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-xl opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
             <div className="relative w-32 h-32 rounded-full bg-gradient-to-br from-primary to-secondary p-1 transform group-hover:scale-110 transition-transform duration-500">
               <div className="w-full h-full rounded-full overflow-hidden">
-                <Image 
-                  src="/images/profile/mohamed-ashif.jpg" 
+                <img
+                  src="/images/profile/mohamed-ashif.jpg"
                   alt="Mohamed Ashif"
                   width={128}
                   height={128}
                   className="w-full h-full object-cover"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    target.parentElement!.innerHTML = '<span class="text-5xl flex items-center justify-center w-full h-full">👨‍💻</span>';
+                  }}
                 />
               </div>
             </div>
