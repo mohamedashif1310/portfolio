@@ -28,13 +28,7 @@ export default function AboutPage() {
               <img
                 src="/images/profile/mohamed-ashif.jpg"
                 alt="Mohamed Ashif"
-                width={128}
-                height={128}
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.style.display = 'none';
-                }}
               />
             </div>
             <div className="flex-1 text-center md:text-left">

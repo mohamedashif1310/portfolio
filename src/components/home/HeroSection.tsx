@@ -101,14 +101,7 @@ export default function HeroSection() {
                 <img
                   src="/images/profile/mohamed-ashif.jpg"
                   alt="Mohamed Ashif"
-                  width={128}
-                  height={128}
                   className="w-full h-full object-cover"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.style.display = 'none';
-                    target.parentElement!.innerHTML = '<span class="text-5xl flex items-center justify-center w-full h-full">👨‍💻</span>';
-                  }}
                 />
               </div>
             </div>
