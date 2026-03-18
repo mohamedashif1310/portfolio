@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import { ChevronDown, Sparkles } from 'lucide-react';
 import { siteConfig } from '@/lib/constants';
 import Button from '@/components/ui/Button';

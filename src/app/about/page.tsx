@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import { Download, Briefcase, GraduationCap, Award } from 'lucide-react';
+import { Download, GraduationCap } from 'lucide-react';
 import Container from '@/components/shared/Container';
 import SectionHeading from '@/components/shared/SectionHeading';
 import Button from '@/components/ui/Button';
