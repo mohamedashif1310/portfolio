@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: 'Mohamed Ashif',
   title: 'Testing Associate | QA & Automation Engineer | Data Engineering & IoT Device Testing',
-  description: 'Testing Associate at Amazon with expertise in device testing, automation, and AI/ML evaluation. Computer Science Engineer passionate about quality assurance and innovation.',
+  description: 'Testing Associate at Amazon with expertise in device testing, WLAN network testing, automation, AI/ML evaluation, and AI-native development. Computer Science Engineer passionate about quality assurance, innovation, and building production software with AI.',
   url: 'https://mohamedashif.dev',
   email: 'mohamedashif1310@gmail.com',
   phone: '+91 9566801711',

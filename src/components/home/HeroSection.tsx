@@ -14,6 +14,8 @@ const roles = [
   'Automation Specialist',
   'Device Testing Expert',
   'AI Evaluator',
+  'AI Native Developer',
+  'WLAN Network Test Engineer',
 ];
 
 export default function HeroSection() {

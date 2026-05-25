@@ -22,3 +22,653 @@ Retrying 1/3...
  GET / [32m200[39m in 336ms
  [37m[1m○[22m[39m Compiling /projects ...
  [32m[1m✓[22m[39m Compiled /projects in 997ms (692 modules)
+ [37m[1m○[22m[39m Compiling /contact ...
+ [32m[1m✓[22m[39m Compiled /contact in 1407ms (724 modules)
+ [32m[1m✓[22m[39m Compiled in 486ms (348 modules)
+ [37m[1m○[22m[39m Compiling /api/contact ...
+ [32m[1m✓[22m[39m Compiled /api/contact in 626ms (406 modules)
+Contact form submission: {
+  name: [32m'bob'[39m,
+  email: [32m'mohamedashif1310@gmail.com'[39m,
+  subject: [32m'Just Saying Hi'[39m,
+  message: [32m'hi'[39m
+}
+ POST /api/contact [32m200[39m in 830ms
+ [37m[1m○[22m[39m Compiling /studio ...
+ [32m[1m✓[22m[39m Compiled /studio in 2.1s (801 modules)
+ [32m[1m✓[22m[39m Compiled /api/studio/blog in 311ms (435 modules)
+ GET /api/studio/blog [32m200[39m in 308ms
+ GET /api/studio/blog [32m200[39m in 455ms
+ [32m[1m✓[22m[39m Compiled in 2.7s (771 modules)
+ [32m[1m✓[22m[39m Compiled in 720ms (370 modules)
+ [32m[1m✓[22m[39m Compiled in 830ms (771 modules)
+ [32m[1m✓[22m[39m Compiled in 691ms (771 modules)
+ [31m[1m⨯[22m[39m ./src/components/home/FeaturedProjects.tsx
+Error: 
+  [31mx[0m Unexpected token `section`. Expected jsx identifier
+    ,-[[36;1;4mC:\Users\madashhh\Documents\Kiro\resume\src\components\home\FeaturedProjects.tsx[0m:63:1]
+ [2m63[0m | 
+ [2m64[0m | export default function FeaturedProjects() {
+ [2m65[0m |   return (
+ [2m66[0m |     <section className="relative py-24 overflow-hidden">
+    : [31;1m     ^^^^^^^[0m
+ [2m67[0m |       {/* Background */}
+ [2m68[0m |       <div className="absolute inset-0 bg-surface-light dark:bg-[#0a0a0f]" aria-hidden="true">
+ [2m68[0m |         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(99,102,241,0.05),transparent_50%)]" />
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./src/components/home/FeaturedProjects.tsx
+./src/app/page.tsx
+ [37m[1m○[22m[39m Compiling /_error ...
+ [32m[1m✓[22m[39m Compiled /_error in 3.5s (998 modules)
+ GET / [32m200[39m in 367ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\madashhh\Documents\Kiro\resume\.next\server\vendor-chunks'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/clsx' in C:\Users\madashhh\Documents\Kiro\resume\.next\server for build dependencies doesn't lead to expected result 'C:\Users\madashhh\Documents\Kiro\resume\.next\server\vendor-chunks\clsx.js', but to 'Error: Can't resolve './vendor-chunks/clsx' in 'C:\Users\madashhh\Documents\Kiro\resume\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/clsx (expected C:\Users\madashhh\Documents\Kiro\resume\.next\server\vendor-chunks\clsx.js)
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\.next\server\app\api\studio\blog\route.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\.next\server\app\api\studio\blog\route.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/lucide-react' in C:\Users\madashhh\Documents\Kiro\resume\.next\server for build dependencies doesn't lead to expected result 'C:\Users\madashhh\Documents\Kiro\resume\.next\server\vendor-chunks\lucide-react.js', but to 'Error: Can't resolve './vendor-chunks/lucide-react' in 'C:\Users\madashhh\Documents\Kiro\resume\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/lucide-react (expected C:\Users\madashhh\Documents\Kiro\resume\.next\server\vendor-chunks\lucide-react.js)
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\.next\server\app\api\studio\blog\route.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\.next\server\app\api\studio\blog\route.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+ GET / [32m200[39m in 58ms
+ [37m[1m○[22m[39m Compiling /_not-found ...
+ [32m[1m✓[22m[39m Compiled /_not-found in 1300ms (997 modules)
+ GET /_next/static/css/app/layout.css?v=1779714699054 [33m404[39m in 1721ms
+ GET /_next/static/chunks/main-app.js?v=1779714699054 [33m404[39m in 1659ms
+ GET /_next/static/chunks/app-pages-internals.js [33m404[39m in 1645ms
+ GET /_next/static/chunks/webpack.js?v=1779714699054 [33m404[39m in 1714ms
+ GET /_next/static/chunks/app/page.js [33m404[39m in 1647ms
+ GET /_next/static/chunks/app/not-found.js [33m404[39m in 1646ms
+ [31m[1m⨯[22m[39m Error: Cannot find module './948.js'
+Require stack:
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\app\_not-found\page.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\start-server.js
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1456:15)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:55:36
+[90m    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)[39m
+[90m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1242:25)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at __webpack_require__.f.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:198:28[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:110:67[90m)[39m
+    at Array.map (<anonymous>)
+    at __webpack_require__.X [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:162:22[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\app\page.js:1:44126
+    at Object.<anonymous> [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\app\page.js:1:44179[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1812:14)[39m
+[90m    at Object..js (node:internal/modules/cjs/loader:1943:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1533:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1335:12)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at requirePage [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require.js:109:84[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:103:84
+    at async loadComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:103:26[90m)[39m
+    at async DevServer.findPageComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\next-server.js:714:36[90m)[39m
+    at async DevServer.findPageComponents [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\dev\next-dev-server.js:577:20[90m)[39m
+    at async DevServer.renderPageComponent [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:1910:24[90m)[39m
+    at async DevServer.renderToResponseImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:1962:32[90m)[39m
+    at async DevServer.pipeImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:922:25[90m)[39m
+    at async NextNodeServer.handleCatchallRenderRequest [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\next-server.js:272:17[90m)[39m
+    at async DevServer.handleRequestImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:818:17[90m)[39m
+    at async [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\trace\trace.js:154:20[90m)[39m
+    at async DevServer.handleRequest [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\dev\next-dev-server.js:336:24[90m)[39m
+    at async invokeRender [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\router-server.js:179:21[90m)[39m
+    at async handleRequest [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\router-server.js:359:24[90m)[39m
+    at async requestHandlerImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\router-server.js:383:13[90m)[39m
+    at async Server.requestListener [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\start-server.js:141:13[90m)[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: [
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\webpack-runtime.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\app\\_not-found\\page.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\require.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\load-components.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\build\\utils.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-server.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\start-server.js'[39m
+  ],
+  page: [32m'/'[39m
+}
+ GET /_next/static/chunks/app/error.js [33m404[39m in 119ms
+ [32m[1m✓[22m[39m Compiled /_error in 516ms (985 modules)
+ [31m[1m⨯[22m[39m Error: Cannot find module './682.js'
+Require stack:
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\pages\_document.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\start-server.js
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1456:15)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:55:36
+[90m    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)[39m
+[90m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1242:25)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at __webpack_require__.f.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:198:28[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:110:67[90m)[39m
+    at Array.map (<anonymous>)
+    at __webpack_require__.X [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:162:22[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\pages\_document.js:1:335
+    at Object.<anonymous> [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\pages\_document.js:1:376[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1812:14)[39m
+[90m    at Object..js (node:internal/modules/cjs/loader:1943:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1533:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1335:12)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at requirePage [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require.js:109:84[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:71:33[90m)[39m
+    at async DevServer.findPageComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\next-server.js:714:36[90m)[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: [
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\webpack-runtime.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\pages\\_document.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\require.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\load-components.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\build\\utils.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-server.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\start-server.js'[39m
+  ]
+}
+ [31m[1m⨯[22m[39m Error: Cannot find module './948.js'
+Require stack:
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\pages\_document.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\start-server.js
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1456:15)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:55:36
+[90m    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)[39m
+[90m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1242:25)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at __webpack_require__.f.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:198:28[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:110:67[90m)[39m
+    at Array.map (<anonymous>)
+    at __webpack_require__.X [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:162:22[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\app\page.js:1:44126
+    at Object.<anonymous> [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\app\page.js:1:44179[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1812:14)[39m
+[90m    at Object..js (node:internal/modules/cjs/loader:1943:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1533:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1335:12)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at requirePage [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require.js:109:84[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:103:84
+    at async loadComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:103:26[90m)[39m
+    at async DevServer.findPageComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\next-server.js:714:36[90m)[39m
+    at async DevServer.findPageComponents [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\dev\next-dev-server.js:577:20[90m)[39m
+    at async DevServer.renderPageComponent [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:1910:24[90m)[39m
+    at async DevServer.renderToResponseImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:1962:32[90m)[39m
+    at async DevServer.pipeImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:922:25[90m)[39m
+    at async NextNodeServer.handleCatchallRenderRequest [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\next-server.js:272:17[90m)[39m
+    at async DevServer.handleRequestImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:818:17[90m)[39m
+    at async [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\trace\trace.js:154:20[90m)[39m
+    at async DevServer.handleRequest [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\dev\next-dev-server.js:336:24[90m)[39m
+    at async invokeRender [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\router-server.js:179:21[90m)[39m
+    at async handleRequest [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\router-server.js:359:24[90m)[39m
+    at async requestHandlerImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\router-server.js:383:13[90m)[39m
+    at async Server.requestListener [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\start-server.js:141:13[90m)[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: [
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\webpack-runtime.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\pages\\_document.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\require.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\load-components.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\build\\utils.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-server.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\start-server.js'[39m
+  ],
+  page: [32m'/'[39m
+}
+ [31m[1m⨯[22m[39m Error: Cannot find module './682.js'
+Require stack:
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\pages\_document.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\start-server.js
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1456:15)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:55:36
+[90m    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)[39m
+[90m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1242:25)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at __webpack_require__.f.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:198:28[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:110:67[90m)[39m
+    at Array.map (<anonymous>)
+    at __webpack_require__.X [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:162:22[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\pages\_document.js:1:335
+    at Object.<anonymous> [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\pages\_document.js:1:376[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1812:14)[39m
+[90m    at Object..js (node:internal/modules/cjs/loader:1943:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1533:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1335:12)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at requirePage [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require.js:109:84[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:71:33[90m)[39m
+    at async DevServer.findPageComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\next-server.js:714:36[90m)[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: [
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\webpack-runtime.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\pages\\_document.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\require.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\load-components.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\build\\utils.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-server.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\start-server.js'[39m
+  ]
+}
+ GET / [31m500[39m in 31ms
+ GET /_next/static/chunks/fallback/main.js [33m404[39m in 209ms
+ GET /_next/static/chunks/fallback/webpack.js [33m404[39m in 214ms
+ GET /_next/static/chunks/fallback/pages/_error.js [33m404[39m in 212ms
+ GET /_next/static/chunks/fallback/pages/_app.js [33m404[39m in 214ms
+ GET /_next/static/chunks/fallback/react-refresh.js [33m404[39m in 215ms
+ [31m[1m⨯[22m[39m Error: Cannot find module './948.js'
+Require stack:
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\pages\_document.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\start-server.js
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1456:15)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:55:36
+[90m    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)[39m
+[90m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1242:25)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at __webpack_require__.f.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:198:28[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:110:67[90m)[39m
+    at Array.map (<anonymous>)
+    at __webpack_require__.X [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:162:22[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\app\page.js:1:44126
+    at Object.<anonymous> [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\app\page.js:1:44179[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1812:14)[39m
+[90m    at Object..js (node:internal/modules/cjs/loader:1943:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1533:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1335:12)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at requirePage [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require.js:109:84[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:103:84
+    at async loadComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:103:26[90m)[39m
+    at async DevServer.findPageComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\next-server.js:714:36[90m)[39m
+    at async DevServer.findPageComponents [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\dev\next-dev-server.js:577:20[90m)[39m
+    at async DevServer.renderPageComponent [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:1910:24[90m)[39m
+    at async DevServer.renderToResponseImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:1962:32[90m)[39m
+    at async DevServer.pipeImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:922:25[90m)[39m
+    at async NextNodeServer.handleCatchallRenderRequest [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\next-server.js:272:17[90m)[39m
+    at async DevServer.handleRequestImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:818:17[90m)[39m
+    at async [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\trace\trace.js:154:20[90m)[39m
+    at async DevServer.handleRequest [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\dev\next-dev-server.js:336:24[90m)[39m
+    at async invokeRender [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\router-server.js:179:21[90m)[39m
+    at async handleRequest [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\router-server.js:359:24[90m)[39m
+    at async requestHandlerImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\router-server.js:383:13[90m)[39m
+    at async Server.requestListener [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\start-server.js:141:13[90m)[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: [
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\webpack-runtime.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\pages\\_document.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\require.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\load-components.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\build\\utils.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-server.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\start-server.js'[39m
+  ],
+  page: [32m'/'[39m
+}
+ [31m[1m⨯[22m[39m Error: Cannot find module './682.js'
+Require stack:
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\pages\_document.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\start-server.js
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1456:15)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:55:36
+[90m    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)[39m
+[90m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1242:25)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at __webpack_require__.f.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:198:28[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:110:67[90m)[39m
+    at Array.map (<anonymous>)
+    at __webpack_require__.X [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:162:22[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\pages\_document.js:1:335
+    at Object.<anonymous> [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\pages\_document.js:1:376[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1812:14)[39m
+[90m    at Object..js (node:internal/modules/cjs/loader:1943:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1533:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1335:12)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at requirePage [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require.js:109:84[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:71:33[90m)[39m
+    at async DevServer.findPageComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\next-server.js:714:36[90m)[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: [
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\webpack-runtime.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\pages\\_document.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\require.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\load-components.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\build\\utils.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-server.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\start-server.js'[39m
+  ]
+}
+ GET / [31m500[39m in 26ms
+ GET /_next/static/chunks/fallback/main.js [33m404[39m in 81ms
+ GET /_next/static/chunks/fallback/webpack.js [33m404[39m in 84ms
+ GET /_next/static/chunks/fallback/pages/_app.js [33m404[39m in 82ms
+ GET /_next/static/chunks/fallback/react-refresh.js [33m404[39m in 82ms
+ GET /_next/static/chunks/fallback/pages/_error.js [33m404[39m in 84ms
+ [31m[1m⨯[22m[39m Error: Cannot find module './948.js'
+Require stack:
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\pages\_document.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\start-server.js
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1456:15)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:55:36
+[90m    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)[39m
+[90m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1242:25)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at __webpack_require__.f.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:198:28[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:110:67[90m)[39m
+    at Array.map (<anonymous>)
+    at __webpack_require__.X [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:162:22[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\app\page.js:1:44126
+    at Object.<anonymous> [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\app\page.js:1:44179[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1812:14)[39m
+[90m    at Object..js (node:internal/modules/cjs/loader:1943:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1533:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1335:12)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at requirePage [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require.js:109:84[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:103:84
+    at async loadComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:103:26[90m)[39m
+    at async DevServer.findPageComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\next-server.js:714:36[90m)[39m
+    at async DevServer.findPageComponents [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\dev\next-dev-server.js:577:20[90m)[39m
+    at async DevServer.renderPageComponent [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:1910:24[90m)[39m
+    at async DevServer.renderToResponseImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:1962:32[90m)[39m
+    at async DevServer.pipeImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:922:25[90m)[39m
+    at async NextNodeServer.handleCatchallRenderRequest [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\next-server.js:272:17[90m)[39m
+    at async DevServer.handleRequestImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\base-server.js:818:17[90m)[39m
+    at async [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\dev\next-dev-server.js:339:20
+    at async Span.traceAsyncFn [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\trace\trace.js:154:20[90m)[39m
+    at async DevServer.handleRequest [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\dev\next-dev-server.js:336:24[90m)[39m
+    at async invokeRender [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\router-server.js:179:21[90m)[39m
+    at async handleRequest [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\router-server.js:359:24[90m)[39m
+    at async requestHandlerImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\router-server.js:383:13[90m)[39m
+    at async Server.requestListener [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\lib\start-server.js:141:13[90m)[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: [
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\webpack-runtime.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\pages\\_document.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\require.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\load-components.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\build\\utils.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-server.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\start-server.js'[39m
+  ],
+  page: [32m'/'[39m
+}
+ [31m[1m⨯[22m[39m Error: Cannot find module './682.js'
+Require stack:
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+- C:\Users\madashhh\Documents\Kiro\resume\.next\server\pages\_document.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-middleware.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\dev\hot-reloader-webpack.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\router-server.js
+- C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\lib\start-server.js
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1456:15)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:55:36
+[90m    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)[39m
+[90m    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1242:25)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at __webpack_require__.f.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:198:28[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:111:40
+    at Array.reduce (<anonymous>)
+    at __webpack_require__.e [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:110:67[90m)[39m
+    at Array.map (<anonymous>)
+    at __webpack_require__.X [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\webpack-runtime.js:162:22[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\pages\_document.js:1:335
+    at Object.<anonymous> [90m(C:\Users\madashhh\Documents\Kiro\resume\[39m.next\server\pages\_document.js:1:376[90m)[39m
+[90m    at Module._compile (node:internal/modules/cjs/loader:1812:14)[39m
+[90m    at Object..js (node:internal/modules/cjs/loader:1943:10)[39m
+[90m    at Module.load (node:internal/modules/cjs/loader:1533:32)[39m
+[90m    at Module._load (node:internal/modules/cjs/loader:1335:12)[39m
+[90m    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)[39m
+[90m    at Module.<anonymous> (node:internal/modules/cjs/loader:1556:12)[39m
+    at mod.require [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require-hook.js:65:28[90m)[39m
+[90m    at require (node:internal/modules/helpers:152:16)[39m
+    at requirePage [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\require.js:109:84[90m)[39m
+    at [90mC:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:72:65
+    at async Promise.all (index 0)
+    at async loadComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\load-components.js:71:33[90m)[39m
+    at async DevServer.findPageComponentsImpl [90m(C:\Users\madashhh\Documents\Kiro\resume\[39mnode_modules\[4mnext[24m\dist\server\next-server.js:714:36[90m)[39m {
+  code: [32m'MODULE_NOT_FOUND'[39m,
+  requireStack: [
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\webpack-runtime.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\.next\\server\\pages\\_document.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\require.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\load-components.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\build\\utils.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-middleware.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\dev\\hot-reloader-webpack.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\router-server.js'[39m,
+    [32m'C:\\Users\\madashhh\\Documents\\Kiro\\resume\\node_modules\\next\\dist\\server\\lib\\start-server.js'[39m
+  ]
+}
+ GET / [31m500[39m in 23ms
+ GET /_next/static/chunks/fallback/webpack.js [33m404[39m in 161ms
+ GET /_next/static/chunks/fallback/main.js [33m404[39m in 156ms
+ GET /_next/static/chunks/fallback/react-refresh.js [33m404[39m in 138ms
+ GET /_next/static/chunks/fallback/pages/_app.js [33m404[39m in 135ms
+ GET /_next/static/chunks/fallback/pages/_error.js [33m404[39m in 134ms
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, lstat 'C:\Users\madashhh\Documents\Kiro\resume\.next\server\vendor-chunks\clsx.js'
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/clsx' in C:\Users\madashhh\Documents\Kiro\resume\.next\server for build dependencies doesn't lead to expected result 'C:\Users\madashhh\Documents\Kiro\resume\.next\server\vendor-chunks\clsx.js', but to 'Error: Can't resolve './vendor-chunks/clsx' in 'C:\Users\madashhh\Documents\Kiro\resume\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/clsx (expected C:\Users\madashhh\Documents\Kiro\resume\.next\server\vendor-chunks\clsx.js)
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\.next\server\app\_not-found\page.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\.next\server\app\_not-found\page.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/lucide-react' in C:\Users\madashhh\Documents\Kiro\resume\.next\server for build dependencies doesn't lead to expected result 'C:\Users\madashhh\Documents\Kiro\resume\.next\server\vendor-chunks\lucide-react.js', but to 'Error: Can't resolve './vendor-chunks/lucide-react' in 'C:\Users\madashhh\Documents\Kiro\resume\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/lucide-react (expected C:\Users\madashhh\Documents\Kiro\resume\.next\server\vendor-chunks\lucide-react.js)
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\.next\server\app\_not-found\page.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\.next\server\app\_not-found\page.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w> [webpack.cache.PackFileCacheStrategy/webpack.FileSystemInfo] Resolving './vendor-chunks/tailwind-merge' in C:\Users\madashhh\Documents\Kiro\resume\.next\server for build dependencies doesn't lead to expected result 'C:\Users\madashhh\Documents\Kiro\resume\.next\server\vendor-chunks\tailwind-merge.js', but to 'Error: Can't resolve './vendor-chunks/tailwind-merge' in 'C:\Users\madashhh\Documents\Kiro\resume\.next\server'' instead. Resolving dependencies are ignored for this path.
+<w>  at resolve commonjs file ./vendor-chunks/tailwind-merge (expected C:\Users\madashhh\Documents\Kiro\resume\.next\server\vendor-chunks\tailwind-merge.js)
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\.next\server\webpack-runtime.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\.next\server\app\_not-found\page.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\.next\server\app\_not-found\page.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\require.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\server\load-components.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\utils.js
+<w>  at file dependencies C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at file C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
+<w>  at resolve commonjs C:\Users\madashhh\Documents\Kiro\resume\node_modules\next\dist\build\webpack\loaders\next-route-loader\index.js
