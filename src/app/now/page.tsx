@@ -55,10 +55,6 @@ export default function NowPage() {
             </ul>
           </Card>
         </div>
-
-        <p className="text-sm text-text-secondary dark:text-text-dark-secondary text-center mt-12">
-          This page is inspired by <a href="https://nownownow.com" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">nownownow.com</a>
-        </p>
       </Container>
     </div>
   );

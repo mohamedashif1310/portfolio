@@ -89,24 +89,28 @@ export default function FeaturedProjects() {
 
         {/* Reel Counter — Hero Spotlight */}
         <ScrollReveal variant="fade-up" delay={100}>
-          <div className="mb-16 rounded-3xl border border-border-light dark:border-white/[0.06] bg-white dark:bg-[#111118] overflow-hidden">
+          <div className="mb-16 rounded-2xl sm:rounded-3xl border border-border-light dark:border-white/[0.06] bg-white dark:bg-[#111118] overflow-hidden">
             <div className="grid grid-cols-1 lg:grid-cols-2">
               {/* Live Preview */}
-              <div className="relative bg-gradient-to-br from-emerald-500/5 to-teal-500/5 p-4 flex flex-col">
-                <div className="absolute top-4 left-4 flex gap-1.5 z-10">
-                  <div className="w-3 h-3 rounded-full bg-red-400" />
-                  <div className="w-3 h-3 rounded-full bg-yellow-400" />
-                  <div className="w-3 h-3 rounded-full bg-green-400" />
+              <div className="relative bg-gradient-to-br from-emerald-500/5 to-teal-500/5 p-3 sm:p-4 flex flex-col">
+                {/* Browser chrome */}
+                <div className="flex items-center gap-1.5 mb-2 sm:mb-0 sm:absolute sm:top-4 sm:left-4 z-10">
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-red-400" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-yellow-400" />
+                  <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-green-400" />
+                  <span className="ml-2 text-[10px] sm:hidden text-text-secondary dark:text-text-dark-secondary">reel-counter-website.vercel.app</span>
                 </div>
-                <div className="absolute top-3 left-1/2 -translate-x-1/2 text-xs text-text-secondary dark:text-text-dark-secondary bg-white/80 dark:bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm z-10">
+                <div className="hidden sm:block absolute top-3 left-1/2 -translate-x-1/2 text-xs text-text-secondary dark:text-text-dark-secondary bg-white/80 dark:bg-white/10 px-3 py-1 rounded-full backdrop-blur-sm z-10">
                   reel-counter-website.vercel.app
                 </div>
-                <div ref={iframeRef} className="w-full flex-1 mt-6 rounded-xl overflow-hidden">
+
+                {/* Iframe container */}
+                <div ref={iframeRef} className="w-full h-[250px] sm:h-[320px] lg:flex-1 lg:h-auto sm:mt-4 rounded-lg sm:rounded-xl overflow-hidden">
                   {showIframe && (
                     <iframe
                       src="https://reel-counter-website.vercel.app/"
                       title="Reel Counter Live Preview"
-                      className="w-[125%] h-[125%] border-0 pointer-events-none origin-top-left scale-[0.8]"
+                      className="w-[142%] h-[142%] sm:w-[125%] sm:h-[125%] border-0 pointer-events-none origin-top-left scale-[0.7] sm:scale-[0.8]"
                       loading="lazy"
                       sandbox="allow-scripts allow-same-origin"
                     />
@@ -114,11 +118,11 @@ export default function FeaturedProjects() {
                 </div>
 
                 {/* Development Workflow — bottom strip */}
-                <div className="mt-3 p-3 rounded-xl bg-white/60 dark:bg-white/[0.03] border border-border-light dark:border-white/[0.06]">
-                  <p className="text-[10px] font-semibold text-text-primary dark:text-text-dark-primary mb-1.5 uppercase tracking-wider">AI Development Workflow</p>
+                <div className="mt-2 sm:mt-3 p-2 sm:p-3 rounded-lg sm:rounded-xl bg-white/60 dark:bg-white/[0.03] border border-border-light dark:border-white/[0.06]">
+                  <p className="text-[9px] sm:text-[10px] font-semibold text-text-primary dark:text-text-dark-primary mb-1 uppercase tracking-wider">AI Development Workflow</p>
                   <div className="flex flex-wrap gap-1">
                     {['Ideation', 'Architecture', 'Prompt Design', 'Code Gen', 'Testing', 'Deploy'].map((step, i) => (
-                      <span key={step} className="inline-flex items-center gap-0.5 text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 font-medium">
+                      <span key={step} className="inline-flex items-center gap-0.5 text-[9px] sm:text-[10px] px-1.5 py-0.5 rounded bg-emerald-500/10 text-emerald-700 dark:text-emerald-300 font-medium">
                         <span className="text-emerald-500">{i + 1}.</span> {step}
                       </span>
                     ))}
@@ -127,38 +131,37 @@ export default function FeaturedProjects() {
               </div>
 
               {/* Info Panel */}
-              <div className="p-8 lg:p-10 flex flex-col justify-center">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-4xl">🎬</span>
+              <div className="p-5 sm:p-8 lg:p-10 flex flex-col justify-center">
+                <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+                  <span className="text-3xl sm:text-4xl">🎬</span>
                   <Badge variant="primary">⭐ Spotlight Project</Badge>
                 </div>
-                <h3 className="text-3xl font-bold text-text-primary dark:text-text-dark-primary mb-4">
+                <h3 className="text-2xl sm:text-3xl font-bold text-text-primary dark:text-text-dark-primary mb-3 sm:mb-4">
                   Reel Counter
                 </h3>
-                <p className="text-text-secondary dark:text-text-dark-secondary mb-6 leading-relaxed">
+                <p className="text-sm sm:text-base text-text-secondary dark:text-text-dark-secondary mb-4 sm:mb-6 leading-relaxed">
                   A privacy-first Android app that auto-detects Instagram Reels using accessibility events, 
                   extracts content via on-device ML Kit OCR, and delivers rich analytics — heatmaps, session tracking, 
-                  predictive insights — all 100% offline. Paired with a polished marketing landing page.
+                  predictive insights — all 100% offline.
                 </p>
-                <p className="text-sm text-text-secondary dark:text-text-dark-secondary mb-6 italic border-l-2 border-primary pl-4">
-                  Built end-to-end with Claude Opus 4.6, Amazon Kiro AI (steering files + MCP tools), 
-                  demonstrating full AI-native development — from architecture to deployment.
+                <p className="text-xs sm:text-sm text-text-secondary dark:text-text-dark-secondary mb-4 sm:mb-6 italic border-l-2 border-primary pl-3 sm:pl-4">
+                  Built end-to-end with Claude Opus 4.6, Amazon Kiro AI (steering files + MCP tools) — from architecture to deployment.
                 </p>
 
-                <div className="grid grid-cols-3 gap-3 mb-6">
+                <div className="grid grid-cols-3 gap-2 sm:gap-3 mb-4 sm:mb-6">
                   {[
                     { label: 'Privacy', value: '100%' },
                     { label: 'ML Features', value: '6+' },
                     { label: 'Network Calls', value: 'Zero' },
                   ].map((stat) => (
-                    <div key={stat.label} className="text-center p-3 rounded-xl bg-emerald-500/5 border border-emerald-500/10">
-                      <div className="text-lg font-bold text-emerald-600 dark:text-emerald-400">{stat.value}</div>
-                      <div className="text-xs text-text-secondary dark:text-text-dark-secondary">{stat.label}</div>
+                    <div key={stat.label} className="text-center p-2 sm:p-3 rounded-lg sm:rounded-xl bg-emerald-500/5 border border-emerald-500/10">
+                      <div className="text-sm sm:text-lg font-bold text-emerald-600 dark:text-emerald-400">{stat.value}</div>
+                      <div className="text-[10px] sm:text-xs text-text-secondary dark:text-text-dark-secondary">{stat.label}</div>
                     </div>
                   ))}
                 </div>
 
-                <div className="flex flex-wrap gap-2 mb-6">
+                <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
                   {['AI Native', 'Claude Opus', 'Kiro AI', 'Next.js', 'Android', 'ML Kit', 'Vercel'].map((tag) => (
                     <Badge key={tag} variant="primary">{tag}</Badge>
                   ))}
@@ -168,7 +171,7 @@ export default function FeaturedProjects() {
                   href="https://reel-counter-website.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-xl hover:opacity-90 transition-opacity w-fit"
+                  className="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg sm:rounded-xl hover:opacity-90 transition-opacity w-fit text-sm sm:text-base"
                 >
                   Visit Live Site
                   <ArrowRight className="w-4 h-4" />
