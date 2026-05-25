@@ -24,6 +24,7 @@ export const siteConfig = {
     { name: 'Projects', href: '/projects' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' },
+    { name: 'Studio', href: '/studio' },
   ],
   
   footerLinks: [

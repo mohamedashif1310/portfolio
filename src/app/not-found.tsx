@@ -11,7 +11,7 @@ export default function NotFound() {
           <div className="text-9xl font-bold text-primary mb-4">404</div>
           <h1 className="text-4xl font-bold mb-4">Page Not Found</h1>
           <p className="text-lg text-text-secondary dark:text-text-dark-secondary mb-8">
-            Oops! The page you're looking for seems to have wandered off into the digital void.
+            Oops! The page you&apos;re looking for seems to have wandered off into the digital void.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

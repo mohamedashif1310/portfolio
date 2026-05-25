@@ -1,4 +1,5 @@
 import { Download, GraduationCap } from 'lucide-react';
+import Image from 'next/image';
 import Container from '@/components/shared/Container';
 import SectionHeading from '@/components/shared/SectionHeading';
 import Button from '@/components/ui/Button';
@@ -24,10 +25,13 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto mb-16">
           <div className="flex flex-col md:flex-row gap-8 items-center mb-8">
             <div className="w-32 h-32 rounded-full overflow-hidden border-4 border-primary shadow-lg">
-              <img
+              <Image
                 src="/images/profile/mohamed-ashif.jpg"
                 alt="Mohamed Ashif"
+                width={128}
+                height={128}
                 className="w-full h-full object-cover"
+                priority
               />
             </div>
             <div className="flex-1 text-center md:text-left">
@@ -46,10 +50,10 @@ export default function AboutPage() {
 
           <div className="prose prose-lg dark:prose-invert max-w-none">
             <p>
-              I'm a Testing Associate at Amazon with 1.2 years of hands-on experience in end-to-end device testing across multiple product lines. My expertise spans UI testing, automation, and ADB-based testing for devices like Fire Stick, Echo, and Ring.
+              I&apos;m a Testing Associate at Amazon with 1.2 years of hands-on experience in end-to-end device testing across multiple product lines. My expertise spans UI testing, automation, and ADB-based testing for devices like Fire Stick, Echo, and Ring.
             </p>
             <p>
-              Currently, I'm working on the RING Data Engineering and Testing team, focusing on WiFi connectivity testing and data pipelines. I also have 6 months of freelance experience in AI prompt engineering and LLM evaluation.
+              Currently, I&apos;m working on the RING Data Engineering and Testing team, focusing on WiFi connectivity testing and data pipelines. I also have 6 months of freelance experience in AI prompt engineering and LLM evaluation.
             </p>
           </div>
         </div>

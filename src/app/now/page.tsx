@@ -41,8 +41,8 @@ export default function NowPage() {
           <Card hover={false}>
             <h2 className="text-2xl font-bold mb-4">📖 Currently Reading</h2>
             <ul className="space-y-3 text-text-secondary dark:text-text-dark-secondary">
-              <li>• "The Phoenix Project" by Gene Kim</li>
-              <li>• "Designing Data-Intensive Applications" by Martin Kleppmann</li>
+              <li>• &quot;The Phoenix Project&quot; by Gene Kim</li>
+              <li>• &quot;Designing Data-Intensive Applications&quot; by Martin Kleppmann</li>
             </ul>
           </Card>
 

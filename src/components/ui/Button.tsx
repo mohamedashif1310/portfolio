@@ -12,22 +12,25 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200',
+          'relative inline-flex items-center justify-center rounded-xl font-semibold tracking-tight',
+          'transition-all duration-300 ease-out',
           'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2',
           'disabled:pointer-events-none disabled:opacity-50',
+          'active:scale-[0.98]',
           {
-            'bg-primary text-white hover:bg-primary-hover hover:scale-105 shadow-lg hover:shadow-xl':
+            'bg-gradient-to-b from-primary to-primary-600 text-white shadow-glow-primary hover:shadow-glow-primary hover:brightness-110':
               variant === 'primary',
-            'bg-secondary text-white hover:bg-pink-600 hover:scale-105 shadow-lg hover:shadow-xl':
+            'bg-gradient-to-b from-secondary to-secondary-600 text-white shadow-lg hover:shadow-xl hover:brightness-110':
               variant === 'secondary',
-            'border-2 border-primary text-primary hover:bg-primary hover:text-white':
+            'border-2 border-primary/30 text-primary hover:bg-primary/5 hover:border-primary dark:border-primary/20 dark:hover:border-primary/50 backdrop-blur-sm':
               variant === 'outline',
-            'hover:bg-surface-light dark:hover:bg-surface-dark': variant === 'ghost',
+            'text-text-secondary hover:text-text-primary hover:bg-surface-light dark:hover:bg-surface-dark dark:text-text-dark-secondary dark:hover:text-text-dark-primary':
+              variant === 'ghost',
           },
           {
-            'px-3 py-1.5 text-sm': size === 'sm',
-            'px-5 py-2.5 text-base': size === 'md',
-            'px-7 py-3.5 text-lg': size === 'lg',
+            'px-4 py-2 text-sm gap-1.5': size === 'sm',
+            'px-6 py-3 text-base gap-2': size === 'md',
+            'px-8 py-4 text-lg gap-2.5': size === 'lg',
           },
           className
         )}

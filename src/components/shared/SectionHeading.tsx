@@ -5,29 +5,41 @@ interface SectionHeadingProps extends HTMLAttributes<HTMLDivElement> {
   title: string;
   subtitle?: string;
   centered?: boolean;
+  gradient?: boolean;
 }
 
 export default function SectionHeading({
   title,
   subtitle,
   centered = false,
+  gradient = false,
   className,
   ...props
 }: SectionHeadingProps) {
   return (
     <div
       className={cn(
-        'mb-12',
+        'mb-16',
         centered && 'text-center',
         className
       )}
       {...props}
     >
-      <h2 className="text-3xl md:text-4xl font-bold text-text-primary dark:text-text-dark-primary mb-3">
+      <h2
+        className={cn(
+          'text-4xl md:text-5xl font-bold tracking-tight mb-4',
+          gradient
+            ? 'bg-clip-text text-transparent bg-gradient-to-r from-primary via-purple-500 to-secondary'
+            : 'text-text-primary dark:text-text-dark-primary'
+        )}
+      >
         {title}
       </h2>
       {subtitle && (
-        <p className="text-lg text-text-secondary dark:text-text-dark-secondary max-w-2xl">
+        <p className={cn(
+          'text-lg md:text-xl text-text-secondary dark:text-text-dark-secondary max-w-2xl leading-relaxed',
+          centered && 'mx-auto'
+        )}>
           {subtitle}
         </p>
       )}

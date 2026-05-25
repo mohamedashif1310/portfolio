@@ -1,0 +1,24 @@
+
+> personal-portfolio@1.0.0 dev C:\Users\madashhh\Documents\Kiro\resume
+> next dev
+
+  [1m[38;2;173;127;168m▲ Next.js 14.2.35[39m[22m
+  - Local:        http://localhost:3000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 5s
+ [37m[1m○[22m[39m Compiling / ...
+The user aborted a request.
+
+Retrying 1/3...
+The user aborted a request.
+
+Retrying 1/3...
+ [32m[1m✓[22m[39m Compiled / in 16.3s (708 modules)
+ [32m[1m✓[22m[39m Compiled in 1320ms (337 modules)
+ GET / [32m200[39m in 18083ms
+ [32m[1m✓[22m[39m Compiled in 461ms (323 modules)
+ [32m[1m✓[22m[39m Compiled in 1210ms (690 modules)
+ GET / [32m200[39m in 336ms
+ [37m[1m○[22m[39m Compiling /projects ...
+ [32m[1m✓[22m[39m Compiled /projects in 997ms (692 modules)

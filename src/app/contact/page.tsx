@@ -3,7 +3,6 @@ import Container from '@/components/shared/Container';
 import SectionHeading from '@/components/shared/SectionHeading';
 import ContactForm from '@/components/contact/ContactForm';
 import SocialLinks from '@/components/contact/SocialLinks';
-import Card from '@/components/ui/Card';
 import { siteConfig } from '@/lib/constants';
 
 export const metadata = {
@@ -11,64 +10,51 @@ export const metadata = {
   description: 'Get in touch with me for projects, opportunities, or just to say hi',
 };
 
+const contactInfo = [
+  { icon: Mail, title: 'Email', value: siteConfig.email, href: `mailto:${siteConfig.email}` },
+  { icon: MapPin, title: 'Location', value: siteConfig.location, sub: siteConfig.timezone },
+  { icon: Clock, title: 'Response Time', value: `Typically ${siteConfig.responseTime}` },
+];
+
 export default function ContactPage() {
   return (
-    <div className="py-20">
+    <div className="py-24">
       <Container>
         <SectionHeading
           title="Get In Touch"
-          subtitle="Have a project in mind or just want to chat? I'd love to hear from you"
+          subtitle="Have a project in mind or just want to chat? I&apos;d love to hear from you"
           centered
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
           <div>
-            <h3 className="text-2xl font-bold mb-6">Send Me a Message</h3>
+            <h3 className="text-2xl font-bold mb-8">Send Me a Message</h3>
             <ContactForm />
           </div>
 
-          {/* Contact Info */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-            
-            <Card hover={false}>
-              <div className="flex items-start gap-4">
-                <Mail className="w-6 h-6 text-primary mt-1" />
-                <div>
-                  <h4 className="font-semibold mb-1">Email</h4>
-                  <a
-                    href={`mailto:${siteConfig.email}`}
-                    className="text-text-secondary hover:text-primary transition-colors"
-                  >
-                    {siteConfig.email}
-                  </a>
+            <h3 className="text-2xl font-bold mb-8">Contact Information</h3>
+
+            {contactInfo.map(({ icon: Icon, title, value, href, sub }) => (
+              <div key={title} className="p-5 rounded-2xl bg-white dark:bg-white/[0.02] border border-border-light dark:border-white/[0.06] hover:border-primary/20 transition-all duration-300">
+                <div className="flex items-start gap-4">
+                  <div className="p-2.5 rounded-xl bg-primary/10 text-primary">
+                    <Icon className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-text-primary dark:text-text-dark-primary mb-1">{title}</h4>
+                    {href ? (
+                      <a href={href} className="text-text-secondary dark:text-text-dark-secondary hover:text-primary transition-colors">{value}</a>
+                    ) : (
+                      <p className="text-text-secondary dark:text-text-dark-secondary">{value}</p>
+                    )}
+                    {sub && <p className="text-sm text-text-secondary/60 dark:text-text-dark-secondary/60 mt-0.5">{sub}</p>}
+                  </div>
                 </div>
               </div>
-            </Card>
+            ))}
 
-            <Card hover={false}>
-              <div className="flex items-start gap-4">
-                <MapPin className="w-6 h-6 text-primary mt-1" />
-                <div>
-                  <h4 className="font-semibold mb-1">Location</h4>
-                  <p className="text-text-secondary">{siteConfig.location}</p>
-                  <p className="text-sm text-text-secondary">{siteConfig.timezone}</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card hover={false}>
-              <div className="flex items-start gap-4">
-                <Clock className="w-6 h-6 text-primary mt-1" />
-                <div>
-                  <h4 className="font-semibold mb-1">Response Time</h4>
-                  <p className="text-text-secondary">Typically {siteConfig.responseTime}</p>
-                </div>
-              </div>
-            </Card>
-
-            <div>
+            <div className="pt-4">
               <h4 className="font-semibold mb-4">Connect on Social Media</h4>
               <SocialLinks />
             </div>
